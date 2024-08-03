@@ -1,0 +1,16 @@
+img{
+    width: 60px;
+    height: auto;
+    border-radius:55px;
+}
+a{
+    margin-left: 10px;
+}
+/* li a{
+    color: black !important;
+} */
+
+*{
+    background-color: rgb(31, 31, 31);
+    color: white;
+}

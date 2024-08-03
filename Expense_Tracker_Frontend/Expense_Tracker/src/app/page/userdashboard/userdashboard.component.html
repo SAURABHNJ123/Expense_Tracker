@@ -1,0 +1,44 @@
+<div class="container mt-5">
+    <h2>View Expenses</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th>Amount</th>
+          <th>Created At</th>
+          <th>Updated At</th>
+          <th>Comments</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let expense of expenses">
+          <td>{{ expense.category }}</td>
+          <td>{{ expense.amount }}</td>
+          <td>{{ expense.createdAt | date: 'short' }}</td>
+          <td>{{ expense.updatedAt | date: 'short' }}</td>
+          <td>{{ expense.comments }}</td>
+          <td>
+            <button class="btn btn-primary" (click)="openEditModal(expense)">Edit</button>
+            <button class="btn btn-danger" (click)="deleteExpense(expense.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <!-- Edit Expense Modal -->
+  <div class="modal fade" id="editExpenseModal" tabindex="-1" aria-labelledby="editExpenseModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="editExpenseModalLabel">Edit Expense</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <app-edit-expense [expense]="selectedExpense" (update)="loadExpenses()"></app-edit-expense>
+        </div>
+      </div>
+    </div>
+  </div>
+  

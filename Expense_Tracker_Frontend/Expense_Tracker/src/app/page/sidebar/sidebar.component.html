@@ -1,0 +1,10 @@
+<div class="card" style="width:20rem;">
+    <div class="card-header text-center" style="background-color: black; color: aliceblue;">
+      Menu
+    </div>
+    <ul class="list-group list-group-flush">
+        <button type="button" class="btn" routerLink="/dashboard"><li class="list-group-item"><i class="fa-solid fa-house" style="margin-right: 5px;"></i>Home</li></button>
+        <button type="button" class="btn" routerLink="/dashboard/add-expense"><li class="list-group-item"> <i class="fa-solid fa-plus" style="margin-right: 5px;"></i>Add Expense</li></button>
+        <button type="button" class="btn" (click)="logout()"><li class="list-group-item"> <i class="fa-solid fa-arrow-right-from-bracket fa-flip-horizontal" style="margin-right: 5px;"></i>Logout</li></button>
+    </ul>
+  </div>

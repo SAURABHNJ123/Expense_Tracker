@@ -1,0 +1,26 @@
+<div class="container mt-5">
+    <h2>Add Expense</h2>
+    <form [formGroup]="expenseForm" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label for="category" class="form-label">Category</label>
+        <input type="text" id="category" class="form-control" formControlName="category" />
+        <div *ngIf="submitted && f['category'].errors" class="text-danger">
+          <div *ngIf="f['category'].errors['required']">Category is required</div>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="amount" class="form-label">Amount</label>
+        <input type="number" id="amount" class="form-control" formControlName="amount" />
+        <div *ngIf="submitted && f['amount'].errors" class="text-danger">
+          <div *ngIf="f['amount'].errors['required']">Amount is required</div>
+          <div *ngIf="f['amount'].errors['min']">Amount must be greater than zero</div>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="comments" class="form-label">Comments</label>
+        <textarea id="comments" class="form-control" formControlName="comments"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Add Expense</button>
+    </form>
+  </div>
+  

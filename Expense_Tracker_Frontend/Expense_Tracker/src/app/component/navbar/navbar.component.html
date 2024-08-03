@@ -1,0 +1,17 @@
+<nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink=""><img src="../../../assets/logo.jpg"></a>
+      <ul class="nav justify-content-end">  
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/login"><i class="fa-solid fa-right-to-bracket" ></i> Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/signup"><i class="fa-solid fa-user-plus fa-beat" ></i> Ragister</a>
+        </li>
+        <li class="nav-item" >
+          <a class="nav-link" (click)="logout()"><i class="fa-solid fa-arrow-right-from-bracket fa-flip-horizontal"></i> Logout</a>
+        </li>
+      </ul>
+    
+    </div>
+  </nav>

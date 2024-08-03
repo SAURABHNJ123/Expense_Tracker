@@ -1,0 +1,20 @@
+
+    <div class="login-container">
+        <!--<h1>{{logindata | json}}</h1>-->
+        <h2 class="text-center mb-4"><i class="fa-solid fa-user fa-beat-fade"></i> Login </h2>
+        <form (ngSubmit)="formSubmit()" class="needs-validation" novalidate>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" id="username" name="username" [(ngModel)]="logindata.username" required>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" name="password" [(ngModel)]="logindata.password" required>
+            </div>
+            <br>
+            <div class="d-grid gap-2 col-6 mx-auto">
+                <button class="btn btn-primary" type="submit"><i class="fa-solid fa-user"></i> Login</button>
+            </div>
+        </form>
+    </div>
